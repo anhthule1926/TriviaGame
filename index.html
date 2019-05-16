@@ -1,0 +1,69 @@
+checkAnswers: function() {
+    var correctAnswer;
+    var userAnswer;
+    var numCorrect = 0;
+    var numIncorrect = 0;
+    var numUnanswered = 0;
+
+    for (var i = 0; i < questions.length; i++) {
+      correctAnswer = questions[i].correctAnswer;
+      userAnswer = $('input[id=radio'+i+']:checked + label').text();
+
+      if (userAnswer === correctAnswer) {
+        numCorrect++;
+      } else if (userAnswer === "") {
+        numUnanswered++;
+      } else if (userAnswer !== correctAnswer) {
+        {
+          numIncorrect++;
+        }
+      }
+    }
+
+    // show the end page with the score tally
+    gameState.showEndPage(numCorrect, numIncorrect, numUnanswered);
+  },
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trivia Game</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</head>
+<body background="assets/images/background-3199325_960_720.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="assets/images/bones-4eaad22395670.png" class="img-fluid text-center" id="main-logo" alt="Bones logo">
+                <h1 class="display-3"><b>Trivia Game</b></h1>
+            </div>
+        </div>
+     <div class="col-md-12 text-center">
+        <div id="start-page" class="start-page-text">
+            <p>You have 60 seconds to answer all of the questions.</p>
+            <div class="btn btn-primary" id="start-button">Start
+            
+        </div>
+    </div>
+    <div>
+        <h4 id="timer"></h4>
+        <div id="questions-box"></div>
+    </div>
+   
+    <div class="hidden" id="end-page">
+        <p id="correctAnswers"></p>
+        <p id="incorrectAnswers"></p>
+        <p id="unanswered"></p>
+    </div>
+ 
+</body>
+</html>

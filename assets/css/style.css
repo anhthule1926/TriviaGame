@@ -1,0 +1,49 @@
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0 15%;
+    margin-top: 50px;
+    padding: 30px;
+    background: darkgrey;
+    color: darkolivegreen;
+}
+
+#main-logo {
+  float: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+h1{
+  border-bottom: 4px solid darkslategray;
+}
+h1, h2, h4 {
+  color: darkolivegreen;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  font-size: 50px;
+  line-height: 30px;
+}
+
+p{
+  color: darkolivegreen;
+  font-size: 20px;
+}
+
+.btn {
+  padding: 15px 75px;
+  margin-top: 30px;
+  font-size: 20px;
+  background: rgb(56, 33, 5);
+  border: 2px solid #000ecf;
+}
+
+#question {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 500;
+  color: darkolivegreen;
+}
+
