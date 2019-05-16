@@ -1,31 +1,3 @@
-checkAnswers: function() {
-    var correctAnswer;
-    var userAnswer;
-    var numCorrect = 0;
-    var numIncorrect = 0;
-    var numUnanswered = 0;
-
-    for (var i = 0; i < questions.length; i++) {
-      correctAnswer = questions[i].correctAnswer;
-      userAnswer = $('input[id=radio'+i+']:checked + label').text();
-
-      if (userAnswer === correctAnswer) {
-        numCorrect++;
-      } else if (userAnswer === "") {
-        numUnanswered++;
-      } else if (userAnswer !== correctAnswer) {
-        {
-          numIncorrect++;
-        }
-      }
-    }
-
-    // show the end page with the score tally
-    gameState.showEndPage(numCorrect, numIncorrect, numUnanswered);
-  },
-}
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
